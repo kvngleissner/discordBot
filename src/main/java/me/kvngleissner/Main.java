@@ -1,7 +1,13 @@
 package me.kvngleissner;
 
+import javax.security.auth.login.LoginException;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        try {
+            JavaBot bot = new JavaBot();
+        } catch (LoginException e) {
+            System.out.println("Errro: Invalid Token provided");
+        }
     }
 }
