@@ -27,7 +27,6 @@ public class ClearCommand extends ListenerAdapter {
                 event.getChannel().sendMessageEmbeds(commandEmbed.build()).queue();
             } else {
                 // Gets Specified Amount of Messages and Deletes them
-                System.out.println("test");
                 List<Message> messages = event.getChannel()
                         .getHistory().retrievePast(
                                 Integer.parseInt(arguments[1]) + 1).complete();
