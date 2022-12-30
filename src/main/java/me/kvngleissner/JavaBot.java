@@ -1,6 +1,7 @@
 package me.kvngleissner;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import me.kvngleissner.Listeners.UserInfo;
 import me.kvngleissner.Listeners.ClearCommand;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
@@ -27,6 +28,7 @@ public class JavaBot {
         shardManager = builder.build();
         // Registering Commands
         shardManager.addEventListener(new ClearCommand());
+        shardManager.addEventListener(new UserInfo());
     }
 
     public ShardManager getShardManager() {

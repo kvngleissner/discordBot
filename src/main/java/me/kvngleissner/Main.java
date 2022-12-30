@@ -12,6 +12,5 @@ public class Main {
         } catch (LoginException e) {
             System.out.println("Errro: Invalid Token provided");
         }
-
     }
 }
